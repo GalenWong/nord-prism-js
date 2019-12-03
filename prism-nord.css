@@ -3,12 +3,17 @@
 /*********************************************************
 * General
 */
+pre[class*="language-"] {
+  border-radius: 8px;
+  box-shadow: rgba(184, 194, 215, 0.25) 0px 4px 6px,
+    rgba(184, 194, 215, 0.1) 0px 5px 7px;
+}
 pre[class*="language-"],
 code[class*="language-"] {
   color: #d8dee9;
   font-size: 1em;
   text-shadow: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -38,13 +43,13 @@ code[class*="language-"]::mozselection {
 }
 pre[class*="language-"] {
   padding: 1em;
-  margin: .5em 0;
+  margin: 0.5em 0;
   overflow: auto;
   background: #2e3440;
 }
 :not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
+  padding: 0.1em;
+  border-radius: 0.3em;
   color: #d8dee9;
   background: #2e3440;
 }
@@ -52,7 +57,7 @@ pre[class*="language-"] {
 * Tokens
 */
 .namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 .token.comment,
 .token.prolog,
@@ -133,4 +138,22 @@ pre[class*="language-"] > code[class*="language-"] {
   pointer-events: none;
   line-height: inherit;
   white-space: pre;
+}
+/*********************************************************
+* Line numbers
+*/
+pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
+span.line-numbers-rows {
+  padding: 1em 0.5em;
+}
+
+pre.line-numbers > span.line-numbers-rows {
+  border-right: 0;
+}
+
+span.line-numbers-rows > span:before {
+  color: #4c566a;
 }
